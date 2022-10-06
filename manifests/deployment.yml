@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: "kalse-65a7"
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: "kalse-65a7"
+  template:
+    metadata:
+      labels:
+        app: "kalse-65a7"
+    spec:
+      containers:
+        - name: "kalse-65a7"
+          image: "omkar123.azurecr.io/kalse"
+          ports:
+          - containerPort: 18610
